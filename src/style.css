@@ -56,6 +56,17 @@ section{
     gap: var(--space-lg);
 }
 
+.btn{
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
 section .infos{
     width: 100%;
     display: flex;
@@ -80,6 +91,7 @@ section .infos{
     /* width: 30px;
     height: 30px; */
     border: 1px solid var(--border-primary-color);
+    border-radius: 50%;
 }
 
 .fill{
@@ -88,4 +100,28 @@ section .infos{
 
 .food{
     background-color: var(--bg-food-color);
+}
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #35353587;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .start-game, 
+.modal .game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.modal .game-over{
+    display: none;
 }
